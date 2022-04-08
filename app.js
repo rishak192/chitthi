@@ -123,7 +123,7 @@ app.post('/users', (req, res) => {
                             to: email,
                             subject: 'Activate',
                             // text: `Please click on the link provided to activate the account https://chhithi.herokuapp.com/users/${email}/${validation_code}/${id}/${username}`
-                            text: `Please click on the link provided to activate the account ${process.env.URL}/users/${email}/${validation_code}/${id}/${username}`
+                            text: `Please click on the link provided to activate the account ${process.env.URL}users/${email}/${validation_code}/${id}/${username}`
                             /////// Change text link while deploying
                         };
 
@@ -263,7 +263,7 @@ app.post('/reset', (req, res) => {
             from: 'quickfinder746@gmail.com',
             to: email,
             subject: 'Test',
-            text: `Please click on the link provided to reset password ${process.env.URL}/reset/${email}/${validation_code}/${id}`
+            text: `Please click on the link provided to reset password ${process.env.URL}reset/${email}/${validation_code}/${id}`
             /////// Change text link while deploying
         };
 
