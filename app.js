@@ -102,7 +102,7 @@ app.post('/users', (req, res) => {
                             let transporter = nodemailer.createTransport({
                                 service: 'gmail',
                                 auth: {
-                                    user: process.env.EMAIL ,    // Sender email
+                                    user: process.env.EMAIL,    // Sender email
                                     pass: process.env.PASSWORD // Sender password
                                 }
                             });
@@ -112,7 +112,7 @@ app.post('/users', (req, res) => {
                                 to: email,
                                 subject: 'Activate',
                                 // text: `Please click on the link provided to activate the account https://chhithi.herokuapp.com/users/${email}/${validation_code}/${id}/${username}`
-                                text: `Please click on the link provided to activate the account https://infinite-coast-67960.herokuapp.com/users/${email}/${validation_code}/${id}/${username}`
+                                text: `Please click on the link provided to activate the account ${process.env.URL}users/${email}/${validation_code}/${id}/${username}`
                                 /////// Change text link while deploying
                             };
                             
