@@ -17,7 +17,7 @@ const { generateMessage } = require('./utils/messages')
 var moment = require('moment');
 
 const local = 'mongodb://127.0.0.1:27017/Chitthi'
-const mongodb_uri="mongodb+srv://rishak192:Mongodb@192@cluster0.66jxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+const mongodb_uri="mongodb+srv://rishak192:<password>@cluster0.66jxu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 const store = new MongodbSession({
     uri: mongodb_uri,
     collestion: 'sessions'
@@ -98,8 +98,8 @@ app.post('/users', (req, res) => {
                             let transporter = nodemailer.createTransport({
                                 service: 'gmail',
                                 auth: {
-                                    user: "rishak192@gmail.com" ,    // Sender email
-                                    pass: "Password@192" // Sender password
+                                    user: "EMAIL" ,    // Sender email
+                                    pass: "PASSWORD" // Sender password
                                 }
                             });
                             
